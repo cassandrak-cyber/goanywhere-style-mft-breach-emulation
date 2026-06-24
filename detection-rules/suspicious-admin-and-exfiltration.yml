@@ -1,0 +1,34 @@
+title: Suspicious Admin Creation and Possible Data Exfiltration
+id: goanywhere-style-mft-lab-001
+status: experimental
+description: Detects suspicious administrator account creation and unusual file transfer activity in a managed file transfer style environment.
+author: Cassandra Hopkins
+date: 2026-06-24
+logsource:
+  product: linux
+  service: auditd
+detection:
+  selection_admin_creation:
+    command|contains:
+      - "useradd"
+      - "adduser"
+      - "net user"
+  selection_file_staging:
+    command|contains:
+      - "cp"
+      - "zip"
+      - "tar"
+  selection_exfil:
+    command|contains:
+      - "curl"
+      - "wget"
+      - "scp"
+      - "python3 -m http.server"
+  condition: selection_admin_creation or selection_file_staging or selection_exfil
+level: high
+tags:
+  - attack.t1190
+  - attack.t1136
+  - attack.t1005
+  - attack.t1074
+  - attack.t1041
