@@ -1,1 +1,8 @@
-
+1. Lab network diagram
+2. Nmap scan of lab target
+3. Vulnerable web app login page
+4. Test sensitive files
+5. Simulated file staging folder
+6. Wireshark traffic showing file transfer
+7. Detection rule file
+8. Final GitHub README
