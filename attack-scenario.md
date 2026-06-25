@@ -1,52 +1,34 @@
-# Attack Scenario
+Attack Scenario
 
-## Background
+Scenario Overview
 
-Managed File Transfer systems are commonly used by companies to exchange sensitive files with vendors, customers, and internal business units. Because these systems often contain confidential information, they are valuable targets for attackers.
+This project emulates the attack behavior observed during the 2023 GoAnywhere Managed File Transfer (MFT) breach in a safe, controlled lab environment. The objective was not to reproduce the actual GoAnywhere vulnerability, but to understand the attack lifecycle and demonstrate how similar attacker behavior could be detected and investigated.
 
-In 2023, attackers exploited a vulnerability in GoAnywhere MFT environments and used that access to steal sensitive files. This lab recreates the behavior of that type of attack in a safe environment.
+In this lab, an Ubuntu virtual machine was configured to represent a managed file transfer server containing realistic but fictional business data. A Python HTTP server simulated an exposed web-based file transfer application. Representative files included customer account records, employee payroll information, and vendor transfer requests.
 
-## Simulated Attack Chain
+After verifying the service was accessible, the simulated attacker discovered the available files, collected the sensitive business data through the web service, staged the files into a single archive, and prepared them for simulated exfiltration. Throughout the exercise, server logs, forensic artifacts, and evidence were preserved to demonstrate how defenders could investigate and detect similar activity.
 
-### Phase 1: Reconnaissance
+Attack Objectives
 
-The attacker identifies a web-based file transfer application exposed inside the lab network.
+The simulated attacker attempted to:
 
-Example activity:
+* Identify an exposed managed file transfer service.
+* Discover sensitive business documents.
+* Collect valuable customer, employee, and vendor information.
+* Stage the collected data into a compressed archive.
+* Prepare the archive for exfiltration.
+* Leave evidence that could later be identified through log analysis and forensic investigation.
 
-- Scanning for open ports
-- Identifying web services
-- Reviewing HTTP headers and login pages
+Defensive Objectives
 
-### Phase 2: Initial Access
+The purpose of this emulation was to help defenders understand:
 
-The attacker uses a purposely vulnerable web application to simulate exploitation of an exposed service.
+* What evidence this type of attack leaves behind.
+* How web server logs can reveal unauthorized file access.
+* How file staging can indicate preparation for data theft.
+* How MITRE ATT&CK techniques map to each phase of the attack.
+* How organizations can improve detection and response for managed file transfer systems.
 
-This does not use the real GoAnywhere vulnerability. It only represents the concept of exploiting a public-facing application.
+Ethical Statement
 
-### Phase 3: Discovery
-
-After gaining access, the attacker searches for files that may contain sensitive information.
-
-Example test files:
-
-- fake_customer_records.csv
-- fake_employee_data.xlsx
-- fake_vendor_transfer.txt
-
-### Phase 4: Collection and Staging
-
-The attacker copies test files into a staging folder before exfiltration.
-
-### Phase 5: Exfiltration Simulation
-
-The attacker transfers fake test files to another system inside the lab environment.
-
-### Phase 6: Detection
-
-Defensive controls are reviewed to identify suspicious behavior, such as:
-
-- Unusual admin account creation
-- Large file downloads
-- Access to sensitive directories
-- Unexpected outbound network traffic
+This project was performed entirely within an isolated lab environment using fictional business data. No real organizations, production systems, or customer information were targeted. The project focuses on understanding attacker behavior to improve defensive security practices.
