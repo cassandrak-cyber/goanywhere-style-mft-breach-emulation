@@ -1,17 +1,25 @@
-# Executive Summary
+Executive Summary
 
-This lab emulates a GoAnywhere-style Managed File Transfer breach in a controlled environment. The goal was to understand how attackers may target exposed file transfer systems, gain unauthorized access, locate sensitive files, and exfiltrate data.
+Project Overview
 
-The lab showed that file transfer systems are high-value targets because they often store confidential business, customer, employee, or vendor data. Even when encryption is used, organizations still need strong access controls, patch management, monitoring, and vendor risk management.
+The purpose of this project was to safely emulate the attack behavior observed during the 2023 GoAnywhere Managed File Transfer (MFT) breach. Rather than recreating the actual GoAnywhere vulnerability, I built a controlled lab environment to simulate the stages of the attack while focusing on threat emulation, detection opportunities, and incident response.
 
-Key defensive takeaways:
+The lab used an Ubuntu virtual machine to represent a managed file transfer server containing realistic but fictional business data, including customer account records, employee payroll information, and vendor transfer requests. A Python HTTP server was used to simulate an exposed file transfer application. After verifying the service was accessible, I simulated an attacker discovering, collecting, staging, and preparing sensitive files for exfiltration.
 
-- Do not expose administrative panels directly to the public internet.
-- Apply security patches quickly.
-- Monitor for suspicious account creation.
-- Watch for large or unusual file downloads.
-- Use least privilege access.
-- Audit third-party vendors that handle sensitive data.
-- Create alerts for abnormal outbound traffic.
+Throughout the exercise, I documented each stage of the attack, mapped activities to the MITRE ATT&CK framework, preserved forensic evidence including HTTP server logs and SHA-256 hashes, and identified opportunities for detection and defensive monitoring.
 
-This project demonstrates threat emulation, MITRE ATT&CK mapping, detection logic, and professional security documentation.
+Key Skills Demonstrated
+
+* Threat Emulation
+* Linux Administration
+* Web Server Configuration
+* MITRE ATT&CK Mapping
+* Digital Forensics
+* Data Staging
+* Log Analysis
+* Detection Engineering
+* Security Documentation
+
+Lessons Learned
+
+This project reinforced that successful threat emulation is not only about demonstrating how an attack works, but also understanding how defenders can detect, investigate, and respond to malicious activity. It also highlighted the importance of protecting internet-facing file transfer systems, monitoring access to sensitive files, and preserving evidence during incident response.
