@@ -25,10 +25,12 @@ This lab was performed in an isolated environment using intentionally vulnerable
 
 Example lab tools:
 
-- Kali Linux
-- Vulnerable web application
-- Windows or Linux target VM
-- Python simple HTTP server
+- Ubuntu Linux virtual machine
+- Kali Linux attacker workstation
+- Python HTTP server simulating an exposed MFT application
+- Simulated business data (.csv files)
+- MITRE ATT&ck mapping
+- Detection engineering documetation
 
 
 ## Attack Scenario
@@ -94,7 +96,7 @@ Action: Started a local Python HTTP server and confirmed that representative bus
 Purpose: Demonstrate how an exposed file transfer service may present sensitive business data to an attacker after initial access.
 MITRE ATT&CK: T1190 – Exploit Public-Facing Application (lab simulation).
 
-Phase 2 – Simulated Public-Facing Service 
+Phase 2 – Reconnassaince 
 •	Started a Python HTTP server.
 •	Simulated an exposed MFT application.
 •	Verified the service through a web browser.
