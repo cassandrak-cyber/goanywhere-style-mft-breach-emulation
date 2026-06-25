@@ -28,11 +28,8 @@ Example lab tools:
 - Kali Linux
 - Vulnerable web application
 - Windows or Linux target VM
-- Wireshark
-- Nmap
-- Burp Suite
 - Python simple HTTP server
-- Sigma-style detection logic
+
 
 ## Attack Scenario
 
