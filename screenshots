@@ -1,8 +1,15 @@
-1. Lab network diagram
-2. Nmap scan of lab target
-3. Vulnerable web app login page
-4. Test sensitive files
-5. Simulated file staging folder
-6. Wireshark traffic showing file transfer
-7. Detection rule file
-8. Final GitHub README
+Screenshots/
+│
+├── 01_Ubuntu_IP_Address.png
+├── 02_Business_Files_Created.png
+├── 03_Business_File_Verification.png
+├── 04_MFT_Server_Running.png
+├── 05_MFT_Web_Portal.png
+├── 06_Customer_File_Accessed.png
+├── 07_HTTP_GET_Server_Logs.png
+├── 08_File_Collection_wget.png
+├── 09_Collected_Files.png
+├── 10_Data_Staging.png
+├── 11_Zip_Archive_Created.png
+├── 12_SHA256_Hash.png
+└── 13_Server_Log_Evidence.png
