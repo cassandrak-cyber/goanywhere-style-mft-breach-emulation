@@ -50,7 +50,7 @@ The simulated attack follows this general flow:
 A simulated Managed File Transfer (MFT) environment was created on an Ubuntu virtual machine. Representative business files were added to emulate the types of sensitive information attackers often target during data theft campaigns. Ubuntu machine getting ip address with ip -br addr command. Linux machine pinging ip addressing using ping command. 
 
 If an attacker compromises a managed file transfer server, they’re usually looking for high-value business data, not random files.
-Before emulating the attack, I created representative business data to simulate the types of files commonly stored on managed file transfer servers. This included customer account information, employee payroll data, and vendor transfer requests. All data was fictional and created solely for lab purposes. I created realistic but fake business documents because one of the primary objectives in attacks like the GoAnywhere breach is data theft rather than system destruction.
+Before emulating the attack, I created representative business data to simulate the types of files commonly stored on managed file transfer servers. This included customer account information and employee payroll data. All data was fictional and created solely for lab purposes. I created realistic but fake business documents because one of the primary objectives in attacks like the GoAnywhere breach is data theft rather than system destruction.
 
 
 <img width="468" height="262" alt="image" src="https://github.com/user-attachments/assets/ba753354-9433-4110-93e6-dd7d96bf0f7a" />
