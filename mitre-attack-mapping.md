@@ -1,3 +1,19 @@
+```mermaid
+flowchart LR
+
+A[Reconnaissance<br>T1595]
+B[Public-Facing MFT Server<br>T1190]
+C[Discovery<br>T1083]
+D[Collection<br>T1005]
+E[Data Staging<br>T1074]
+F[ZIP Archive Created<br>T1074]
+G[Simulated Exfiltration<br>T1567]
+H[Detection & Investigation]
+
+A --> B --> C --> D --> E --> F --> G --> H
+```
+
+
 # MITRE ATT&CK Mapping
 
 ```mermaid
